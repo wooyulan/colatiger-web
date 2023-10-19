@@ -26,7 +26,7 @@ export default function LoginForm() {
 
   const [rememberPassword, setRememberPassword] = useState(!!loginParams);
 
-  function afterLoginSuccess(params) {
+  function afterLoginSuccess(params,access_token) {
     // 记住密码
     if (rememberPassword) {
       setLoginParams(JSON.stringify(params));
@@ -35,19 +35,23 @@ export default function LoginForm() {
     }
     // 记录登录状态
     localStorage.setItem('userStatus', 'login');
+    localStorage.setItem('token',access_token)
     // 跳转首页
     window.location.href = '/';
   }
 
   function login(params) {
+    debugger
     setErrorMessage('');
     setLoading(true);
     axios
-      .post('/api/user/login', params)
+      .post('/api/v1/auth/login', params)
       .then((res) => {
+       console.log(res.data)
         const { status, msg } = res.data;
         if (status === 'ok') {
-          afterLoginSuccess(params);
+          const { access_token, token_type } = res.data.data;
+          afterLoginSuccess(params,access_token);
         } else {
           setErrorMessage(msg || t['login.form.login.errMsg']);
         }
@@ -84,7 +88,7 @@ export default function LoginForm() {
         className={styles['login-form']}
         layout="vertical"
         ref={formRef}
-        initialValues={{ userName: 'admin', password: 'admin' }}
+        initialValues={{ userName: 'wooyulan@163.com', password: '123456' }}
       >
         <Form.Item
           field="userName"
