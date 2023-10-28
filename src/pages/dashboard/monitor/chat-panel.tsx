@@ -36,8 +36,8 @@ export default function ChatPanel() {
   }, []);
 
   return (
-    <div className={styles['chat-panel']}>
-      <div className={styles['chat-panel-header']}>
+    <div className={styles['assistant-panel']}>
+      <div className={styles['assistant-panel-header']}>
         <Typography.Title
           style={{ marginTop: 0, marginBottom: 16 }}
           heading={6}
@@ -58,12 +58,12 @@ export default function ChatPanel() {
           </Button>
         </Space>
       </div>
-      <div className={styles['chat-panel-content']}>
+      <div className={styles['assistant-panel-content']}>
         <Spin loading={loading} style={{ width: '100%' }}>
           <MessageList data={messageList} />
         </Spin>
       </div>
-      <div className={styles['chat-panel-footer']}>
+      <div className={styles['assistant-panel-footer']}>
         <Space size={8}>
           <Input suffix={<IconFaceSmileFill />} />
           <Button type="primary">{t['monitor.chat.update']}</Button>

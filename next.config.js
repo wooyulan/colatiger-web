@@ -7,7 +7,7 @@ const withTM = require('next-transpile-modules')([
   '@arco-themes/react-arco-pro',
 ]);
 
-const setting = require("./src/settings.json");
+const setting = require('./src/settings.json');
 
 module.exports = withLess(
   withTM({

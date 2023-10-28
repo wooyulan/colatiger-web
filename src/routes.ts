@@ -29,6 +29,18 @@ export const routes: IRoute[] = [
       },
     ],
   },
+
+  {
+    name: 'menu.assistant',
+    key: 'assistant',
+    children: [
+      {
+        name: 'menu.assistant.chat',
+        key: 'assistant/chat',
+      },
+    ],
+  },
+
   {
     name: 'menu.visualization',
     key: 'visualization',
