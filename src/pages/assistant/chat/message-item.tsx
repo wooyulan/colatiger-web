@@ -1,6 +1,9 @@
 import React from 'react';
 import { Avatar, Comment } from '@arco-design/web-react';
 import { Markdown } from '@/components/Markdown';
+import styles from './style/index.module.less';
+import ReceiverItem from '@/pages/assistant/chat/components/ReceiverItem/receive-item';
+import SenderItem from '@/pages/assistant/chat/components/SenderItem/sender-item';
 
 export interface MessageProps {
   messageId?: string;
@@ -16,56 +19,11 @@ function MessageItem(props: any) {
   const commentStyle = { margin: '20px 0' };
 
   return (
-    <div>
+    <div className={styles['chat-container']}>
       {message.isBot ? (
-        <Comment
-          style={commentStyle}
-          align="right"
-          author="Assistant"
-          avatar={
-            <Avatar>
-              <img
-                alt="avatar"
-                src="//p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/9eeb1800d9b78349b24682c3518ac4a3.png~tplv-uwbnlip3yd-webp.webp"
-              />
-            </Avatar>
-          }
-          content={
-            <div>
-              <Markdown content={message.content} />
-            </div>
-          }
-          datetime={message.createAt}
-        />
+        <ReceiverItem userName={'assistant'} item={message}></ReceiverItem>
       ) : (
-        <Comment
-          style={commentStyle}
-          align="left"
-          author="Assistant"
-          avatar={
-            <Avatar>
-              <img
-                alt="avatar"
-                src="//p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/9eeb1800d9b78349b24682c3518ac4a3.png~tplv-uwbnlip3yd-webp.webp"
-              />
-            </Avatar>
-          }
-          content={
-            <div>
-              {message.file ? (
-                <div>
-                  <img
-                    src={message.file}
-                    alt=""
-                    style={{ width: 100, height: 100 }}
-                  />
-                </div>
-              ) : null}
-              {message.content}
-            </div>
-          }
-          datetime={message.createAt}
-        />
+        <SenderItem userName={'eric'} item={message} />
       )}
     </div>
   );

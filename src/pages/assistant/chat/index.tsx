@@ -18,14 +18,12 @@ import { Sse } from '@/utils/sse';
 import useLocale from '@/utils/useLocale';
 import dayjs from 'dayjs';
 import axios from '@/utils/axios';
-import { any, string } from 'prop-types';
-import handler from '@antv/component/src/slider/handler';
 import MessageItem, { MessageProps } from '@/pages/assistant/chat/message-item';
-import MessageList from '@/pages/dashboard/monitor/message-list';
 import { UploadItem } from '@arco-design/web-react/es/Upload';
 
 const { Row, Col } = Grid;
 const InputSearch = Input.Search;
+
 const uploadUrl = `${process.env.NEXT_PUBLIC_API_BASE}/api/v1/upload`;
 
 function Chatbox() {
@@ -91,7 +89,6 @@ function Chatbox() {
     });
 
     const uuid = uuidv4;
-
     messageList.push({
       messageId: uuid,
       content: '',
@@ -160,6 +157,7 @@ function Chatbox() {
               </Card>
               <div ref={messagesEndRef} />
             </div>
+
             <div>
               <Upload
                 name="files"
@@ -168,6 +166,7 @@ function Chatbox() {
                 onChange={handleUploadChange}
               />
             </div>
+
             <InputSearch
               searchButton={t['assistant.chat.send']}
               placeholder={t['assistant.chat.search-content']}

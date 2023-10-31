@@ -5,9 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5eb2f48-7b3d-4fab-a3e5-7a99547dcf86" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/colatiger-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/colatiger-web.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/icons/vercel.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/message-view.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/style/index.module.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/assistant/chat/components/ReceiverItem/receive-item.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/assistant/chat/components/ReceiverItem/style/index.module.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/assistant/chat/components/SenderItem/sender-item.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/assistant/chat/components/SenderItem/style/index.module.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/assistant/chat/style/index.module.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.husky/pre-commit" beforeDir="false" afterPath="$PROJECT_DIR$/.husky/pre-commit" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/assistant/chat/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/assistant/chat/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/assistant/chat/message-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/assistant/chat/message-item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +62,7 @@
     "git-widget-placeholder": "developer",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/Users/eric/Documents/workspace/arch/colatiger-web",
+    "last_opened_file_path": "/Users/eric/Documents/workspace/arch/colatiger-web/src/pages/assistant/chat/components/MessageView/icons",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
@@ -63,7 +75,14 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/icons" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/assistant/chat/components/SenderItem/style" />
+      <recent name="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/style" />
+      <recent name="$PROJECT_DIR$/src/pages/assistant/chat/components/ReceiverItem/style" />
+      <recent name="$PROJECT_DIR$/src/pages/assistant/chat/style" />
       <recent name="$PROJECT_DIR$/src/pages/assistant/chat" />
     </key>
   </component>
@@ -75,7 +94,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698742474327</updated>
-      <workItem from="1698742475287" duration="489000" />
+      <workItem from="1698742475287" duration="7618000" />
     </task>
     <servers />
   </component>
@@ -92,6 +111,12 @@
           <url>file://$PROJECT_DIR$/src/utils/useStorage.ts</url>
           <line>14</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/pages/assistant/chat/index.tsx</url>
+          <line>11</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
