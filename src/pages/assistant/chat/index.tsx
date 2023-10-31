@@ -31,6 +31,7 @@ function Chatbox() {
   const [searchLoading, setSearchLoading] = useState(false);
   const [searchText, setSearchText] = useState('');
   const [inputDisabled, setInputDisabled] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   // 设置messageArray
   const [messageList, setMessageList] = useState<MessageProps[]>([]);
@@ -39,6 +40,26 @@ function Chatbox() {
   const handlerSearch = (e: string) => {
     setSearchText(e);
   };
+
+  // 加载历史记录
+  function loadHisChat(){
+    setErrorMessage('');
+    axios
+        .post('/api/v1/chat/history')
+        .then((res) => {
+          console.log(res.data);
+          const { status, msg } = res.data;
+          if (status === 'ok') {
+
+          } else {
+            setErrorMessage(msg || t['res.data.data,msg']);
+          }
+        })
+        .finally(() => {
+
+        });
+  }
+
 
   function onSearchClick(value: string) {
     setSearchLoading(true);
@@ -76,7 +97,7 @@ function Chatbox() {
   }
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'auto' });
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   useEffect(() => {

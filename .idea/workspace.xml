@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5eb2f48-7b3d-4fab-a3e5-7a99547dcf86" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Markdown/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/assistant/chat/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/assistant/chat/locale/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/assistant/chat/message-item.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/sse.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.husky/pre-commit" beforeDir="false" afterPath="$PROJECT_DIR$/.husky/pre-commit" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/colatiger-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/colatiger-web.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/locale/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/locale/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dashboard/monitor/chat-panel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboard/monitor/chat-panel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/assistant/chat/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/assistant/chat/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,10 +53,13 @@
     "last_opened_file_path": "/Users/eric/Documents/workspace/arch/colatiger-web",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.stylelint": "/Users/eric/Documents/workspace/arch/colatiger-web/node_modules/stylelint",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
-    "ts.external.directory.path": "/Users/eric/Documents/workspace/arch/colatiger-web/node_modules/typescript/lib"
+    "ts.external.directory.path": "/Users/eric/Documents/workspace/arch/colatiger-web/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -78,6 +68,17 @@
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a5eb2f48-7b3d-4fab-a3e5-7a99547dcf86" name="Changes" comment="" />
+      <created>1698742474327</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698742474327</updated>
+      <workItem from="1698742475287" duration="489000" />
+    </task>
+    <servers />
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
