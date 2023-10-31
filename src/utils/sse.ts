@@ -3,6 +3,7 @@ import { fetchEventSource } from '@fortaine/fetch-event-source';
 
 interface IChatOptions {
   message: string;
+  images?: string;
   messageId?: string;
   onFinish: (message: string) => void;
   onError?: (err: Error) => void;
@@ -33,6 +34,7 @@ export class Sse {
     const chatPath = this.path();
     const payload: any = {
       message: options.message,
+      images: [options.images],
     };
 
     // 分享对话

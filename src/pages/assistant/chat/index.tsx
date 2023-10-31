@@ -8,7 +8,9 @@ import {
   Table,
   Typography,
   Avatar,
+  Upload,
 } from '@arco-design/web-react';
+
 import MultiInterval from '@/components/Chart/multi-stack-interval';
 import { v4 as uuidv4 } from 'uuid';
 import locale from './locale';
@@ -20,9 +22,11 @@ import { any, string } from 'prop-types';
 import handler from '@antv/component/src/slider/handler';
 import MessageItem, { MessageProps } from '@/pages/assistant/chat/message-item';
 import MessageList from '@/pages/dashboard/monitor/message-list';
+import { UploadItem } from '@arco-design/web-react/es/Upload';
 
 const { Row, Col } = Grid;
 const InputSearch = Input.Search;
+const uploadUrl = `${process.env.NEXT_PUBLIC_API_BASE}/api/v1/upload`;
 
 function Chatbox() {
   const chat = useRef(new Sse());
@@ -32,6 +36,7 @@ function Chatbox() {
   const [searchText, setSearchText] = useState('');
   const [inputDisabled, setInputDisabled] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const [fileUrl, setFileUrl] = useState('');
 
   // 设置messageArray
   const [messageList, setMessageList] = useState<MessageProps[]>([]);
@@ -42,24 +47,38 @@ function Chatbox() {
   };
 
   // 加载历史记录
-  function loadHisChat(){
+  function loadHisChat() {
     setErrorMessage('');
-    axios
-        .post('/api/v1/chat/history')
-        .then((res) => {
-          console.log(res.data);
-          const { status, msg } = res.data;
-          if (status === 'ok') {
+    axios.post('/api/v1/chat/history').then((res) => {
+      console.log(res.data.data);
+      const { status, data } = res.data;
+      if (status === 'ok') {
+        data
+          .sort(
+            (a, b) =>
+              dayjs(a.created_at).valueOf() - dayjs(b.created_at).valueOf()
+          )
+          .forEach((v: any) => {
+            messageList.push({
+              messageId: uuidv4(),
+              content: v.user_content,
+              file: v.file,
+              isBot: false,
+              createAt: dayjs().format('YYYY-MM-DD HH:mm:ss'),
+            });
 
-          } else {
-            setErrorMessage(msg || t['res.data.data,msg']);
-          }
-        })
-        .finally(() => {
+            messageList.push({
+              messageId: uuidv4(),
+              content: v.answer,
+              isBot: true,
+              createAt: dayjs().format('YYYY-MM-DD HH:mm:ss'),
+            });
+          });
 
-        });
+        setMessageList([...messageList]);
+      }
+    });
   }
-
 
   function onSearchClick(value: string) {
     setSearchLoading(true);
@@ -82,6 +101,7 @@ function Chatbox() {
 
     chat.current.chat({
       message: value,
+      images: fileUrl,
       onUpdate(message) {
         messageList[messageList.length - 1].content = message;
         setMessageList([...messageList]);
@@ -92,7 +112,6 @@ function Chatbox() {
         setSearchText('');
         setInputDisabled(false);
       },
-      onError() {},
     });
   }
 
@@ -100,9 +119,22 @@ function Chatbox() {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleUploadChange = (
+    fileList: UploadItem[],
+    file: UploadItem & { response: any }
+  ) => {
+    if (file?.status === 'done') {
+      setFileUrl(file?.response?.data?.success_data?.[0]?.preview_url);
+    }
+  };
+
   useEffect(() => {
     scrollToBottom();
   }, [Chatbox]);
+
+  useEffect(() => {
+    loadHisChat();
+  }, []);
 
   return (
     <Space size={16} direction="vertical" style={{ width: '100%' }}>
@@ -128,7 +160,14 @@ function Chatbox() {
               </Card>
               <div ref={messagesEndRef} />
             </div>
-
+            <div>
+              <Upload
+                name="files"
+                action={uploadUrl}
+                style={{ marginTop: 40 }}
+                onChange={handleUploadChange}
+              />
+            </div>
             <InputSearch
               searchButton={t['assistant.chat.send']}
               placeholder={t['assistant.chat.search-content']}
