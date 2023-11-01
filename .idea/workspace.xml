@@ -5,21 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5eb2f48-7b3d-4fab-a3e5-7a99547dcf86" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/icons/vercel.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/message-view.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/style/index.module.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/assistant/chat/components/ReceiverItem/receive-item.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/assistant/chat/components/ReceiverItem/style/index.module.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/assistant/chat/components/SenderItem/sender-item.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/assistant/chat/components/SenderItem/style/index.module.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/assistant/chat/style/index.module.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.husky/pre-commit" beforeDir="false" afterPath="$PROJECT_DIR$/.husky/pre-commit" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/assistant/chat/model/model-param.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/style/highlight.dark.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chart/style/index.module.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chart/style/index.module.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar/style/index.module.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/style/index.module.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/icons/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/message-view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/message-view.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/style/index.module.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/style/index.module.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/assistant/chat/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/assistant/chat/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/assistant/chat/message-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/assistant/chat/message-item.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/visualization/multi-dimension-data-analysis/style/card-block.module.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/visualization/multi-dimension-data-analysis/style/card-block.module.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/global.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/global.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,40 +54,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "developer",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/Users/eric/Documents/workspace/arch/colatiger-web/src/pages/assistant/chat/components/MessageView/icons",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "/Users/eric/Documents/workspace/arch/colatiger-web/node_modules/stylelint",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "ts.external.directory.path": "/Users/eric/Documents/workspace/arch/colatiger-web/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;developer&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/eric/Documents/workspace/arch/colatiger-web/src/pages/assistant/chat/components/MessageView/icons&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;/Users/eric/Documents/workspace/arch/colatiger-web/node_modules/stylelint&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/eric/Documents/workspace/arch/colatiger-web/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/style" />
       <recent name="$PROJECT_DIR$/src/pages/assistant/chat/components/SenderItem/style" />
       <recent name="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/style" />
       <recent name="$PROJECT_DIR$/src/pages/assistant/chat/components/ReceiverItem/style" />
       <recent name="$PROJECT_DIR$/src/pages/assistant/chat/style" />
-      <recent name="$PROJECT_DIR$/src/pages/assistant/chat" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -94,7 +98,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698742474327</updated>
-      <workItem from="1698742475287" duration="7618000" />
+      <workItem from="1698742475287" duration="7947000" />
+      <workItem from="1698755367618" duration="279000" />
+      <workItem from="1698755946913" duration="1536000" />
+      <workItem from="1698803173002" duration="1801000" />
+      <workItem from="1698815210211" duration="6859000" />
     </task>
     <servers />
   </component>
@@ -115,7 +123,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/pages/assistant/chat/index.tsx</url>
           <line>11</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

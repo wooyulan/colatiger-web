@@ -9,6 +9,9 @@ import {
   Typography,
   Avatar,
   Upload,
+  Button,
+  Message,
+  Progress,
 } from '@arco-design/web-react';
 
 import MultiInterval from '@/components/Chart/multi-stack-interval';
@@ -20,6 +23,16 @@ import dayjs from 'dayjs';
 import axios from '@/utils/axios';
 import MessageItem, { MessageProps } from '@/pages/assistant/chat/message-item';
 import { UploadItem } from '@arco-design/web-react/es/Upload';
+import ModelParam from '@/pages/assistant/chat/model/model-param';
+import {
+  IconDelete,
+  IconEdit,
+  IconPlus,
+  IconUpload,
+} from '@arco-design/web-react/icon';
+import { func } from 'prop-types';
+import { float2Fixed } from 'number-precision';
+import { left, right } from '@antv/g2plot/lib/plots/sankey/sankey';
 
 const { Row, Col } = Grid;
 const InputSearch = Input.Search;
@@ -34,21 +47,29 @@ function Chatbox() {
   const [searchText, setSearchText] = useState('');
   const [inputDisabled, setInputDisabled] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
-  const [fileUrl, setFileUrl] = useState('');
-
   // 设置messageArray
   const [messageList, setMessageList] = useState<MessageProps[]>([]);
   const messagesEndRef = useRef(null);
+  const [fileList, setFileList] = useState<UploadItem[]>([]);
 
   const handlerSearch = (e: string) => {
     setSearchText(e);
   };
 
+  // 删除历史记录
+  function handerDelHistory() {
+    axios.post('/api/v1/chat/history/del').then((res) => {
+      const { status, data } = res.data;
+      if (status === 'ok') {
+        setMessageList([]);
+      }
+    });
+  }
+
   // 加载历史记录
   function loadHisChat() {
     setErrorMessage('');
     axios.post('/api/v1/chat/history').then((res) => {
-      console.log(res.data.data);
       const { status, data } = res.data;
       if (status === 'ok') {
         data
@@ -62,14 +83,14 @@ function Chatbox() {
               content: v.user_content,
               file: v.file,
               isBot: false,
-              createAt: dayjs().format('YYYY-MM-DD HH:mm:ss'),
+              createAt: dayjs(v.created_at).format('YYYY-MM-DD HH:mm:ss'),
             });
 
             messageList.push({
               messageId: uuidv4(),
               content: v.answer,
               isBot: true,
-              createAt: dayjs().format('YYYY-MM-DD HH:mm:ss'),
+              createAt: dayjs(v.created_at).format('YYYY-MM-DD HH:mm:ss'),
             });
           });
 
@@ -81,8 +102,13 @@ function Chatbox() {
   function onSearchClick(value: string) {
     setSearchLoading(true);
     setInputDisabled(true);
+    scrollToBottom();
+
+    console.log(fileList);
+
     messageList.push({
       messageId: uuidv4(),
+      file: fileList?.[0]?.response?.data?.success_data?.[0]?.preview_url,
       content: value,
       isBot: false,
       createAt: dayjs().format('YYYY-MM-DD HH:mm:ss'),
@@ -98,7 +124,7 @@ function Chatbox() {
 
     chat.current.chat({
       message: value,
-      images: fileUrl,
+      images: fileList?.[0]?.response?.data?.success_data?.[0]?.preview_url,
       onUpdate(message) {
         messageList[messageList.length - 1].content = message;
         setMessageList([...messageList]);
@@ -108,6 +134,7 @@ function Chatbox() {
         setSearchLoading(false);
         setSearchText('');
         setInputDisabled(false);
+        setFileList([]);
       },
     });
   }
@@ -116,13 +143,8 @@ function Chatbox() {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const handleUploadChange = (
-    fileList: UploadItem[],
-    file: UploadItem & { response: any }
-  ) => {
-    if (file?.status === 'done') {
-      setFileUrl(file?.response?.data?.success_data?.[0]?.preview_url);
-    }
+  const handleUploadChange = (fileList: UploadItem[], file: any) => {
+    setFileList(fileList);
   };
 
   useEffect(() => {
@@ -136,6 +158,11 @@ function Chatbox() {
   return (
     <Space size={16} direction="vertical" style={{ width: '100%' }}>
       <Row gutter={16}>
+        <Col span={4} style={{ minHeight: '550px' }}>
+          <Card>
+            <Typography.Title heading={6}>助理列表</Typography.Title>
+          </Card>
+        </Col>
         <Col span={14}>
           <Card>
             <Typography.Title heading={6}>
@@ -158,33 +185,50 @@ function Chatbox() {
               <div ref={messagesEndRef} />
             </div>
 
-            <div>
-              <Upload
-                name="files"
-                action={uploadUrl}
-                style={{ marginTop: 40 }}
-                onChange={handleUploadChange}
-              />
-            </div>
-
             <InputSearch
               searchButton={t['assistant.chat.send']}
               placeholder={t['assistant.chat.search-content']}
-              style={{ width: '100%', height: '50px', marginTop: '20px' }}
+              style={{ width: '100%', height: '45px', marginTop: '20px' }}
               value={searchText}
               disabled={inputDisabled}
               loading={searchLoading}
               onSearch={onSearchClick}
               onChange={handlerSearch}
             />
+
+            <div
+              style={{
+                marginTop: 10,
+                display: 'flex',
+                justifyContent: 'flex-end',
+              }}
+            >
+              <Space>
+                <Upload
+                  listType="picture-card"
+                  multiple={false}
+                  fileList={fileList}
+                  name="files"
+                  imagePreview
+                  action={uploadUrl}
+                  onChange={handleUploadChange}
+                >
+                  <IconUpload />
+                </Upload>
+                <Button
+                  icon={<IconDelete />}
+                  iconOnly={true}
+                  onClick={handerDelHistory}
+                  style={{ marginLeft: 20 }}
+                />
+              </Space>
+            </div>
           </Card>
         </Col>
-        <Col span={10}>
+        <Col span={6}>
           <Card>
-            <Typography.Title heading={6}>
-              {t['dataAnalysis.title.authorsList']}
-            </Typography.Title>
-            <div style={{ height: '370px' }}></div>
+            <Typography.Title heading={6}>模型设置</Typography.Title>
+            {/*<ModelParam></ModelParam>*/}
           </Card>
         </Col>
       </Row>

@@ -1,13 +1,10 @@
 import React from 'react';
 
 import cls from 'classnames';
-import moment from 'moment';
+import { Markdown } from '@/components/Markdown';
 import styles from './style/index.module.less';
-import moreSvg from './icons/vercel.svg';
 
 const MessageView = ({ content, isSender, createAt, ...rest }) => {
-  console.log(rest.createAt);
-
   const textStyles = cls(styles['text-message-view'], {
     [styles.sender]: isSender,
     [styles.receiver]: !isSender,
@@ -29,23 +26,25 @@ const MessageView = ({ content, isSender, createAt, ...rest }) => {
   });
 
   const renderPopuMenu = () => {
-    return (
-      <div className={popMenuStyles}>
-        <img src={moreSvg} />
-      </div>
-    );
+    return <div className={popMenuStyles}></div>;
   };
 
   const renderMessageView = () => {
     if (!rest?.file) {
-      return <div className={styles['text-item']}>{content}</div>;
+      return (
+        <div className={styles['text-item']}>
+          <Markdown content={content} />
+        </div>
+      );
     } else {
       return (
         <div>
           <div className={styles['image-item']}>
             <img src={rest.file} />
           </div>
-          <div className={styles['text-item']}>{content}</div>
+          <div className={styles['text-item']}>
+            <Markdown content={content} />
+          </div>
         </div>
       );
     }
@@ -55,7 +54,7 @@ const MessageView = ({ content, isSender, createAt, ...rest }) => {
   return (
     <div className={textStyles}>
       <div className={styles['text-message-wrapper']}>
-        <div className={messageTimeStyle}>{moment(createAt).format('LTS')}</div>
+        <div className={messageTimeStyle}>{createAt}</div>
         <div className={bubbleStyles}>
           {isSender && renderPopuMenu()}
           {renderMessageView()}

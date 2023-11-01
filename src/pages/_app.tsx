@@ -17,6 +17,7 @@ import checkLogin from '@/utils/checkLogin';
 import changeTheme from '@/utils/changeTheme';
 import useStorage from '@/utils/useStorage';
 import Layout from './layout';
+import '@/style/highlight.dark.min.css';
 import '../mock';
 
 const store = createStore(rootReducer);
