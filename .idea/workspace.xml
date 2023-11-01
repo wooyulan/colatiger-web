@@ -5,25 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5eb2f48-7b3d-4fab-a3e5-7a99547dcf86" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/assistant/chat/model/model-param.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style/highlight.dark.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chart/style/index.module.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chart/style/index.module.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar/style/index.module.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/style/index.module.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/icons/vercel.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/message-view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/message-view.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/style/index.module.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/style/index.module.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/assistant/chat/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/assistant/chat/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/visualization/multi-dimension-data-analysis/style/card-block.module.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/visualization/multi-dimension-data-analysis/style/card-block.module.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/global.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/global.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/highlight.dark.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/highlight.dark.min.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +87,7 @@
       <workItem from="1698755367618" duration="279000" />
       <workItem from="1698755946913" duration="1536000" />
       <workItem from="1698803173002" duration="1801000" />
-      <workItem from="1698815210211" duration="6859000" />
+      <workItem from="1698815210211" duration="8577000" />
     </task>
     <servers />
   </component>
@@ -122,8 +107,14 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/pages/assistant/chat/index.tsx</url>
-          <line>11</line>
+          <line>14</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/pages/assistant/chat/index.tsx</url>
+          <line>96</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -14,7 +14,6 @@ import {
   Progress,
 } from '@arco-design/web-react';
 
-import MultiInterval from '@/components/Chart/multi-stack-interval';
 import { v4 as uuidv4 } from 'uuid';
 import locale from './locale';
 import { Sse } from '@/utils/sse';
@@ -23,16 +22,12 @@ import dayjs from 'dayjs';
 import axios from '@/utils/axios';
 import MessageItem, { MessageProps } from '@/pages/assistant/chat/message-item';
 import { UploadItem } from '@arco-design/web-react/es/Upload';
-import ModelParam from '@/pages/assistant/chat/model/model-param';
 import {
   IconDelete,
   IconEdit,
   IconPlus,
   IconUpload,
 } from '@arco-design/web-react/icon';
-import { func } from 'prop-types';
-import { float2Fixed } from 'number-precision';
-import { left, right } from '@antv/g2plot/lib/plots/sankey/sankey';
 
 const { Row, Col } = Grid;
 const InputSearch = Input.Search;
@@ -44,7 +39,7 @@ function Chatbox() {
   const t = useLocale(locale);
   // 搜索按钮loading状态
   const [searchLoading, setSearchLoading] = useState(false);
-  const [searchText, setSearchText] = useState('');
+  const [sendText, setSendText] = useState('');
   const [inputDisabled, setInputDisabled] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   // 设置messageArray
@@ -52,8 +47,8 @@ function Chatbox() {
   const messagesEndRef = useRef(null);
   const [fileList, setFileList] = useState<UploadItem[]>([]);
 
-  const handlerSearch = (e: string) => {
-    setSearchText(e);
+  const handlerSend = (e: string) => {
+    setSendText(e);
   };
 
   // 删除历史记录
@@ -79,7 +74,7 @@ function Chatbox() {
           )
           .forEach((v: any) => {
             messageList.push({
-              messageId: uuidv4(),
+              messageId: v.id,
               content: v.user_content,
               file: v.file,
               isBot: false,
@@ -87,7 +82,7 @@ function Chatbox() {
             });
 
             messageList.push({
-              messageId: uuidv4(),
+              messageId: v.id,
               content: v.answer,
               isBot: true,
               createAt: dayjs(v.created_at).format('YYYY-MM-DD HH:mm:ss'),
@@ -99,12 +94,10 @@ function Chatbox() {
     });
   }
 
-  function onSearchClick(value: string) {
+  function onSendClick(value: string) {
     setSearchLoading(true);
     setInputDisabled(true);
     scrollToBottom();
-
-    console.log(fileList);
 
     messageList.push({
       messageId: uuidv4(),
@@ -132,7 +125,7 @@ function Chatbox() {
       },
       onFinish(message: string) {
         setSearchLoading(false);
-        setSearchText('');
+        setSendText('');
         setInputDisabled(false);
         setFileList([]);
       },
@@ -189,11 +182,11 @@ function Chatbox() {
               searchButton={t['assistant.chat.send']}
               placeholder={t['assistant.chat.search-content']}
               style={{ width: '100%', height: '45px', marginTop: '20px' }}
-              value={searchText}
+              value={sendText}
               disabled={inputDisabled}
               loading={searchLoading}
-              onSearch={onSearchClick}
-              onChange={handlerSearch}
+              onSearch={onSendClick}
+              onChange={handlerSend}
             />
 
             <div
