@@ -38,6 +38,10 @@ export const routes: IRoute[] = [
         name: 'menu.assistant.chat',
         key: 'assistant/chat',
       },
+      {
+        name: 'menu.assistant.ocr',
+        key: 'assistant/ocr',
+      },
     ],
   },
 

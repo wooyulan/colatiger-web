@@ -202,7 +202,7 @@ function Chatbox() {
                   multiple={false}
                   fileList={fileList}
                   name="files"
-                  imagePreview
+                  limit={1}
                   action={uploadUrl}
                   onChange={handleUploadChange}
                 >

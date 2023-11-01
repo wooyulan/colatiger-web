@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5eb2f48-7b3d-4fab-a3e5-7a99547dcf86" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pages/assistant/ocr/form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/assistant/ocr/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/assistant/ocr/locale/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/message-view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/message-view.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locale/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/locale/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/assistant/chat/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/assistant/chat/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/highlight.dark.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/highlight.dark.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +90,7 @@
       <workItem from="1698755367618" duration="279000" />
       <workItem from="1698755946913" duration="1536000" />
       <workItem from="1698803173002" duration="1801000" />
-      <workItem from="1698815210211" duration="8577000" />
+      <workItem from="1698815210211" duration="15908000" />
     </task>
     <servers />
   </component>
@@ -115,6 +118,12 @@
           <line>96</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/pages/assistant/ocr/form.tsx</url>
+          <line>43</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
