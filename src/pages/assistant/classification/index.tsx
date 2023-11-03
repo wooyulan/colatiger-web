@@ -8,7 +8,8 @@ import {
   Typography,
   Upload,
 } from '@arco-design/web-react';
-import OcrForm from '@/pages/assistant/ocr/form';
+import OcrForm from '@/pages/assistant/classification/ocr-form';
+import ClassificationForm from '@/pages/assistant/classification/classification-form';
 
 const { Row, Col } = Grid;
 
@@ -18,14 +19,15 @@ export default function Ocr() {
       <Row gutter={16}>
         <Col span={12}>
           <Card>
-            <Typography.Title heading={6}>Ocr识别</Typography.Title>
-
-            <OcrForm></OcrForm>
+            <Typography.Title heading={6}>图片分类</Typography.Title>
+            <ClassificationForm></ClassificationForm>
           </Card>
         </Col>
+
         <Col span={12}>
           <Card>
-            <Typography.Title heading={6}>识别结果</Typography.Title>
+            <Typography.Title heading={6}>OCR识别</Typography.Title>
+            <OcrForm></OcrForm>
           </Card>
         </Col>
       </Row>

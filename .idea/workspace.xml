@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5eb2f48-7b3d-4fab-a3e5-7a99547dcf86" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/assistant/ocr/form.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/assistant/ocr/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/assistant/ocr/locale/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/assistant/classification/ocr-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/colatiger-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/colatiger-web.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/locale/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/locale/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/assistant/chat/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/assistant/chat/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/assistant/ocr/form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/assistant/classification/classification-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/assistant/ocr/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/assistant/classification/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/assistant/ocr/locale/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/assistant/classification/locale/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,32 +43,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;developer&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/eric/Documents/workspace/arch/colatiger-web/src/pages/assistant/chat/components/MessageView/icons&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;/Users/eric/Documents/workspace/arch/colatiger-web/node_modules/stylelint&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/eric/Documents/workspace/arch/colatiger-web/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "developer",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/Users/eric/Documents/workspace/arch/colatiger-web",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "/Users/eric/Documents/workspace/arch/colatiger-web/node_modules/stylelint",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "/Users/eric/Documents/workspace/arch/colatiger-web/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/assistant/classification" />
       <recent name="$PROJECT_DIR$/src/pages/assistant/chat/components/MessageView/icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -91,6 +93,9 @@
       <workItem from="1698755946913" duration="1536000" />
       <workItem from="1698803173002" duration="1801000" />
       <workItem from="1698815210211" duration="15908000" />
+      <workItem from="1698843698989" duration="695000" />
+      <workItem from="1698991810895" duration="1485000" />
+      <workItem from="1698994986308" duration="496000" />
     </task>
     <servers />
   </component>
@@ -110,20 +115,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/pages/assistant/chat/index.tsx</url>
-          <line>14</line>
+          <line>18</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/pages/assistant/chat/index.tsx</url>
-          <line>96</line>
-          <properties lambdaOrdinal="-1" />
+          <line>166</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/pages/assistant/ocr/form.tsx</url>
-          <line>43</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
