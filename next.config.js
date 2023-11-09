@@ -42,5 +42,6 @@ module.exports = withLess(
       ];
     },
     pageExtensions: ['tsx'],
+    output: 'export',
   })
 );

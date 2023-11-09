@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5eb2f48-7b3d-4fab-a3e5-7a99547dcf86" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/assistant/classification/ocr-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/colatiger-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/colatiger-web.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/locale/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/locale/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/assistant/ocr/form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/assistant/classification/classification-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/assistant/ocr/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/assistant/classification/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/assistant/ocr/locale/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/assistant/classification/locale/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
