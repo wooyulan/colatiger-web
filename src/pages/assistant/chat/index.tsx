@@ -45,7 +45,7 @@ function Chatbox() {
   // 设置messageArray
   const [messageList, setMessageList] = useState<MessageProps[]>([]);
   const messagesEndRef = useRef(null);
-  const [fileList, setFileList] = useState<UploadItem[]>([]);
+  const [fileList, setFileList] = useState<any[]>([]);
 
   const handlerSend = (e: string) => {
     setSendText(e);

@@ -42,6 +42,9 @@ module.exports = withLess(
       ];
     },
     pageExtensions: ['tsx'],
-    output: 'export',
+    output: 'standalone',
+    experimental: {
+      outputStandalone: true,
+    },
   })
 );
