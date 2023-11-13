@@ -15,7 +15,7 @@ pipeline {
         NAMESPACE = 'poc'
         DEPLOYMENT = 'caixun-web'
         CONTAINER_NAME = 'caixun-web'
-        PORT = '8000'
+        PORT = '3100'
 
 
     }
